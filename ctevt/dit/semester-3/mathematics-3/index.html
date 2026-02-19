@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta charset='utf-8'/>
+<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<title>Prabin00 - CTEVT Diploma Engineering Notes & Solutions</title>
+<meta content='Diploma in Computer / I.T / Civil / Electrical Engineering Notes, Question Papers, PDF, Solutions for CTEVT Nepal. Premium Access available.' name='description'/>
+
+<!-- Google Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- <link rel="icon" type="image/png" href="/assets/images/fevicon2.png"> -->
+<link rel="icon" type="image/png" href="/assets/images/fevicon3.png">
+
+<!-- CSS Styles link -->
+<link rel="stylesheet" href="/assets/css/styles.css">
+
+<!-- Javascript links -->
+<script src="/assets/js/scripts.js" defer></script>
+
+</head>
+<body>
+
+<!-- Navigation -->
+<header>
+    <div class="navbar">
+        <a href="/" class="logo">
+            <img src="/assets/images/mylogo2.png" alt="Prabin00 Logo"  width="90">
+            <span>Prabin00</span>
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/index.html#All-Faculty" onclick="goToCTEVT(event)">Select-Faculty</a>
+            <a href="/p/ctevt-results.html">Check-Results</a>
+            <a href="#" onclick="openModal()">Pricing</a>
+            <a href="#" class="premium-btn" onclick="openModal()"><i class="fas fa-crown"></i> Go Premium</a>
+        </div>
+        <div class="mobile-menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    </div>
+</header>
+
+
+<!-- Main Container -->
+<div class="container">
+    <div class="main-content">
+        
+        <!-- Blog Posts Loop (Blogger Syntax) -->
+        <b:section id='main' showaddelement='yes'>
+            <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+                <b:includable id='main' var='top'>
+                    <b:loop values='data:posts' var='post'>
+                        <!-- Post Content -->
+                        <div class='post-content' style="margin-bottom: 30px;">
+                            <h2 style="margin-bottom: 15px;"><a expr:href='data:post.url'><data:post.title/></a></h2>
+                            
+                            <!-- If it's a single post page, show full content with protection -->
+                            <b:if cond='data:blog.pageType == "item"'>
+                                <div class="post-body">
+                                    <div class="alert-box" style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid var(--primary);">
+                                        <i class="fas fa-info-circle"></i> <b>Note:</b> Free users can read below. To download the PDF, please purchase a subscription.
+                                    </div>
+                                    
+                                    <!-- PDF Viewer Embed Wrapper (Prevent Copy) -->
+                                    <div class="pdf-container" oncontextmenu="return false;">
+                                        <data:post.body/>
+                                    </div>
+
+                                    <!-- Download Lock Section -->
+                                    <div class="download-lock">
+                                        <h3><i class="fas fa-lock"></i> Download Locked</h3>
+                                        <p>Downloads are reserved for Premium Members.</p>
+                                        <br/>
+                                        <button class="sub-btn gold" style="width: auto; padding: 10px 40px;" onclick="openModal()">Unlock Download (Rs. 50/70)</button>
+                                    </div>
+                                </div>
+                            <b:else/>
+                                <!-- Snippet for Homepage -->
+                                <p><data:post.snippet/></p>
+                                <a class="sub-btn" expr:href='data:post.url' style="width: auto; padding: 8px 20px; margin-top: 10px; display: inline-block;">Read Notes</a>
+                            </b:if>
+                        </div>
+                    </b:loop>
+                </b:includable>
+            </b:widget>
+        </b:section>
+    </div>
+
+    <!-- Mathmatics Only View pdf Style-->
+    <style>
+        .Heading-title {
+            background-color: #e7e1e1;
+            color: #000;
+            font-size: 20px;
+            padding: 1px;
+            text-align: center;
+            margin-top: 0px;
+            font-weight: bold;
+            FONT-FAMILY: system-ui;
+        }
+    </style>
+
+    <!-- Mathmatics Only View pdf -->
+    <div class="separator" style="clear: both; text-align: center;">
+        <hr style="border: 2px solid rgb(164, 164, 171); margin: 0px 0px;" />
+        <div class="Heading-title">
+            <span style="color: red; font-size: 20px;">**</span>
+            <span style="color: red; font-size: 16px;">Due to High Misuse of the Solution.</span> 
+                We Closed the Download Options. Those who haven't yet purchase subscription.
+            <span style="color: #0013fb; font-size: 16px;">They Can Only View & print this solution.</span>
+            <span style="color: red; font-size: 20px;">**</span>
+        </div>
+    </div>
+
+    <hr style="border: 2px solid rgb(164, 164, 171); margin: 0px 0px;" />
+    
+    <div class="separator" style="clear: both; text-align: center;">
+            <iframe 
+                src="https://drive.google.com/file/d/1EoXJ08CSF9tRBfR5ayuShD0T1DgKoM76/preview" height="300px" width="390px">
+            </iframe>
+            <!-- <div style="height: 80px; opacity: 0; position: absolute; right: 0px; top: 0px; width: 80px;"></div> -->
+
+        <hr style="border: 2px solid rgb(164, 164, 171); margin: 0px 0px;" />
+        
+        <div class="Heading-title">
+            <span style="color: red; font-size: 24px;">**</span> 
+            <span style="color: red; font-size: 18px;"> 
+                स&#2379;ल&#2369;सनक&#2379; उच&#2381;च द&#2369;र&#2369;पय&#2379;गक&#2379;
+                क&#2366;रणल&#2375; गर&#2381;द&#2366;,
+            </span> ह&#2366;म&#2368;ल&#2375; ड&#2366;उनल&#2379;ड अप&#2381;सन बन&#2381;द
+                गर&#2375;क&#2379; छ&#2380;&#2306;&#2404; 
+            <span style="color: #0013fb; font-size: 20px;"> 
+                क&#2375;वलतप&#2366;ई&#2305;ल&#2375; व&#2375;बस&#2366;इटम&#2366; प&#2367;ड&#2367;एफ ह&#2375;र&#2381;न
+                सक&#2381;न&#2369;ह&#2369;न&#2381;छ&#2404; 
+            </span> धन&#2381;यव&#2366;द&#2404; 
+            <span style="color: red; font-size: 24px;">**</span>
+        </div>
+        <hr style="border: 2px solid rgb(164, 164, 171); margin: 0px 0px;" />
+    </div>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- My QR Code -->
+        <div style="text-align: center;">
+            <hr style="border: 2px solid rgb(164, 164, 171); margin: 0px 0px;">
+            <img alt="Support us on Fone Pay. A Small gift will help to maintain this website." height="auto" src="/assets/images/myqr.png" width="400"/>
+            <hr style="border: 2px solid rgb(164, 164, 171); margin-bottom: 10px;">
+        </div>
+      
+        <style>
+            .wp-block-coblocks-alert {
+                background-color: #bad9d7;
+                border-radius: 15px;
+                color: #000000;
+                padding: 2px;
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+        </style>
+        <div aria-label="Alert section" class="wp-block-coblocks-alert">
+            <h4 style="text-align: center;">
+                <span style="color: red;">**</span>
+                <span>If anybody have (Old &amp; New) Question Paper / Notes or 
+                    <span style="color: red;">Any Problem </span>than Contact here :-&nbsp;
+                </span>
+                <a href="mailto:prabinhamal70@gmail.com">
+                    <span style="color: #2b00fe;">prabinhamal70@gmail.com</span>
+                </a>
+            </h4>
+        </div>
+
+        <b:section id='sidebar' showaddelement='yes'>
+            <b:widget id='HTML1' locked='false' title='Check Results' type='HTML'>
+                <b:includable id='main'>
+                    <div class="price-card" style="padding: 20px; text-align: left; margin-bottom: 20px;">
+                        <h3 style="font-size: 1.2rem;">Quick Links</h3>
+                        <ul style="margin-top: 10px;">
+                            <li style="margin-bottom: 10px;"><a href="https://www.arjun00.com.np/2023/10/ctevt-marksheet-check-for-all-faulty.html" style="color: var(--primary);"><i class="fas fa-external-link-alt"></i> Check CTEVT Result</a></li>
+                            <li style="margin-bottom: 10px;"><a href="#" style="color: var(--primary);"><i class="fas fa-calendar"></i> Academic Calendar</a></li>
+                            <li style="margin-bottom: 10px;"><a href="#" style="color: var(--primary);"><i class="fas fa-question-circle"></i> Entrance Model Qn</a></li>
+                        </ul>
+                    </div>
+                </b:includable>
+            </b:widget>
+            <b:widget id='Label1' locked='false' title='Categories' type='Label'>
+                <b:includable id='main'>
+                    <div class="price-card" style="padding: 20px; text-align: left;">
+                        <h3 style="font-size: 1.2rem;">Categories</h3>
+                        <ul style="margin-top: 10px;">
+                            <b:loop values='data:labels' var='label'>
+                                <li style="margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 5px;">
+                                    <a expr:href='data:label.url'><data:label.name/> (<data:label.count/>)</a>
+                                </li>
+                            </b:loop>
+                        </ul>
+                    </div>
+                </b:includable>
+            </b:widget>
+        </b:section>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-logo-box">
+            <h3>About Prabin00</h3>
+            <p>Assures your Better Quality Providing Best Service to our CTEVT Diploma Students is our Goal. Access Notes, Questions, and Solutions easily.</p>
+            <br/>
+            <div class="logo">
+                <a href="/">
+                    <img src="/assets/images/mylogo2.png" alt="Footer Logo" width="90">
+                </a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/p/about-us.html">About Us</a></li>
+                <li><a href="/p/contact-us.html">Contact Us</a></li>
+                <li><a href="/p/privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Faculty</h3>
+            <ul>
+                <li><a href="#">Diploma in I.T</a></li>
+                <li><a href="#">Diploma in Computer Engg</a></li>
+                <li><a href="#">Diploma in Civil Engg</a></li>
+                <li><a href="#">Diploma in Electrical Engg</a></li>
+                <li><a href="#">See All Courses</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Subscribe</h3>
+            <p>Get full access for lifetime.</p>
+            <button class="sub-btn gold" onclick="openModal()" style="margin-top: 10px;">Get Subscription</button>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; <span id="year"></span> Prabin00.com | All rights reserved. | Developed by Prabin Hamal
+    </div>
+</footer>
+
+<!-- Payment Modal (Hidden by default) -->
+<div class="modal" id="paymentModal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <h2 style="text-align: center; color: var(--primary);">Get Lifetime Access <i class="fas fa-crown" style="color: var(--gold);"></i></h2>
+        <p style="text-align: center; color: #666; margin-bottom: 20px;">Pay once, download forever.</p>
+        
+        <div style="text-align: center; margin-bottom: 20px;">
+            <span style="font-size: 18px; font-weight: bold;">Basic: Rs. 50</span> | 
+            <span style="font-size: 18px; font-weight: bold; color: var(--gold);">Advance: Rs. 70</span>
+        </div>
+
+        <div class="payment-content">
+                <h4>Payment Instructions:</h4>
+                <p>Choose your payment method and send the amount to the details below. After payment, email us at
+                    prabinhamal70@gmail.com.
+                    with proof for activation.
+                </p>
+        </div>
+        <h4>1. Send Money to:</h4>
+        
+        <div class="payment-method">
+            <!-- Replace src with your eSewa logo url -->
+            <img src="https://www.collegenp.com/uploads/2020/01/eSewa.png" alt="eSewa"> 
+            <div>
+                <strong>eSewa ID:</strong> <span style="color: var(--primary); font-weight: bold;">9768300612</span><br/>
+                <small>Name: Prabin Hamal</small>
+            </div>
+        </div>
+
+        <div class="payment-method">
+            <!-- Replace src with your Khalti logo url -->
+            <img src="https://th.bing.com/th/id/R.b2c3c82e2890203b7a4b0cfb188b3f71?rik=69LMjaxwb9Q32w&pid=ImgRaw&r=0" alt="Khalti"> 
+            <div>
+                <strong>Khalti ID:</strong> <span style="color: purple; font-weight: bold;">9768300612</span><br/>
+                <small>Name: Prabin Hamal</small>
+            </div>
+        </div>
+
+        <div class="payment-method">
+            <!-- <i class="fas fa-university" style="font-size: 30px; color: #555;"></i> -->
+             <img src="https://images.seeklogo.com/logo-png/61/1/nabil-bank-logo-png_seeklogo-613796.png" alt="Nabll Bank logo">
+            <div>
+                <strong>Bank Transfer:</strong><br/>
+                Nabil Bank Limited<br/>
+                Acc: **************<br/>
+                Account Holder Name: Prabin Hamal
+            </div>
+        </div>
+
+        <hr style="margin: 20px 0;"/>
+
+        <h4>2. Fill this Form:</h4>
+        <p style="font-size: 13px; color: #666; margin-bottom: 10px;">After payment, send the screenshot and your email here to get download access.</p>
+        
+        <!-- Replace the action with your Google Form URL or Contact Form script -->
+        <form name="payment-confirm" style="display: flex; flex-direction: column; gap: 10px;">
+            <input type="text" placeholder="Your Name" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="email" placeholder="Your Email (for access)" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="text" placeholder="Transaction ID / Remarks" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <button type="button" class="sub-btn" onclick="alert('Thank you! We will verify your payment and send the access link to your email within 1 hour.')">Confirm Payment</button>
+        </form>
+        
+        <p style="text-align: center; font-size: 12px; margin-top: 10px; color: #888;">
+            Access is granted manually after verification. <br/> Need help? <a href="mailto:info@arjun00.com.np" style="color: var(--primary);">Contact Support</a>
+        </p>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+    // Accordion Logic
+    function toggleAccordion(element) {
+        const body = element.nextElementSibling;
+        const icon = element.querySelector('i');
+        
+        // Close all others
+        const allBodies = document.querySelectorAll('.accordion-body');
+        const allIcons = document.querySelectorAll('.accordion-header i');
+        
+        allBodies.forEach(b => {
+            if(b !== body) b.classList.add('hidden');
+        });
+        allIcons.forEach(i => {
+            if(i !== icon) i.style.transform = 'rotate(0deg)';
+        });
+
+        // Toggle current
+        body.classList.toggle('hidden');
+        if(!body.classList.contains('hidden')) {
+            icon.style.transform = 'rotate(180deg)';
+        } else {
+            icon.style.transform = 'rotate(0deg)';
+        }
+    }
+
+    // Modal Logic
+    function openModal() {
+        document.getElementById('paymentModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+        document.getElementById('paymentModal').style.display = 'none';
+    }
+
+    // Close modal if clicked outside
+    window.onclick = function(event) {
+        const modal = document.getElementById('paymentModal');
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Mobile Menu
+    function toggleMenu() {
+        const nav = document.querySelector('.nav-links');
+        if (nav.style.display === 'flex') {
+            nav.style.display = 'none';
+        } else {
+            nav.style.display = 'flex';
+            nav.style.flexDirection = 'column';
+            nav.style.position = 'absolute';
+            nav.style.top = '70px';
+            nav.style.right = '0';
+            nav.style.background = 'white';
+            nav.style.width = '100%';
+            nav.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+            nav.style.padding = '20px';
+        }
+    }
+
+    // Set Copyright Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Prevent Right Click (Content Protection)
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    
+    // Prevent Keyboard Shortcuts for Save (Ctrl+S, Ctrl+P)
+    document.onkeydown = function(e) {
+        if(e.ctrlKey && (e.keyCode === 83 || e.keyCode === 80 || e.keyCode === 85)) {
+            alert('This content is protected. Please buy a subscription to download/print.');
+            return false;
+        }
+    };
+</script>
+
+</body>
+</html>

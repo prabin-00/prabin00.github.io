@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta charset='utf-8'/>
+<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<title>Prabin00 - CTEVT Diploma Engineering Notes & Solutions</title>
+<meta content='Diploma in Computer / I.T / Civil / Electrical Engineering Notes, Question Papers, PDF, Solutions for CTEVT Nepal. Premium Access available.' name='description'/>
+
+<!-- Google Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- <link rel="icon" type="image/png" href="/assets/images/fevicon2.png"> -->
+<link rel="icon" type="image/png" href="/assets/images/fevicon3.png">
+
+<!-- CSS Styles link -->
+<link rel="stylesheet" href="/assets/css/styles.css">
+
+<!-- Javascript links -->
+<script src="/assets/js/scripts.js" defer></script>
+
+</head>
+<body>
+
+<!-- Navigation -->
+<header>
+    <div class="navbar">
+        <a href="/Prabin00.html" class="logo">
+            <img src="https://thumbs.dreamstime.com/b/modern-fitness-abstract-people-letter-ph-logo-vector-inspirations-modern-fitness-abstract-people-letter-ph-logo-vector-157712132.jpg" alt="Prabin00 Logo"  width="90">
+            <span>Prabin00</span>
+        </a>
+        <div class="nav-links">
+            <a href="/Prabin00.html">Home</a>
+            <a href="/Prabin00.html#All-Faculty" onclick="goToCTEVT(event)">Select-Faculty</a>
+            <a href="/p/ctevt-results.html">Check-Results</a>
+            <a href="#" onclick="openModal()">Pricing</a>
+            <a href="#" class="premium-btn" onclick="openModal()"><i class="fas fa-crown"></i> Go Premium</a>
+        </div>
+        <div class="mobile-menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    </div>
+</header>
+
+
+<!-- Main Container -->
+<div class="container">
+    <div class="main-content">
+        
+        <!-- Blog Posts Loop (Blogger Syntax) -->
+        <b:section id='main' showaddelement='yes'>
+            <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+                <b:includable id='main' var='top'>
+                    <b:loop values='data:posts' var='post'>
+                        <!-- Post Content -->
+                        <div class='post-content' style="margin-bottom: 30px;">
+                            <h2 style="margin-bottom: 15px;"><a expr:href='data:post.url'><data:post.title/></a></h2>
+                            
+                            <!-- If it's a single post page, show full content with protection -->
+                            <b:if cond='data:blog.pageType == "item"'>
+                                <div class="post-body">
+                                    <div class="alert-box" style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid var(--primary);">
+                                        <i class="fas fa-info-circle"></i> <b>Note:</b> Free users can read below. To download the PDF, please purchase a subscription.
+                                    </div>
+                                    
+                                    <!-- PDF Viewer Embed Wrapper (Prevent Copy) -->
+                                    <div class="pdf-container" oncontextmenu="return false;">
+                                        <data:post.body/>
+                                    </div>
+
+                                    <!-- Download Lock Section -->
+                                    <div class="download-lock">
+                                        <h3><i class="fas fa-lock"></i> Download Locked</h3>
+                                        <p>Downloads are reserved for Premium Members.</p>
+                                        <br/>
+                                        <button class="sub-btn gold" style="width: auto; padding: 10px 40px;" onclick="openModal()">Unlock Download (Rs. 50/70)</button>
+                                    </div>
+                                </div>
+                            <b:else/>
+                                <!-- Snippet for Homepage -->
+                                <p><data:post.snippet/></p>
+                                <a class="sub-btn" expr:href='data:post.url' style="width: auto; padding: 8px 20px; margin-top: 10px; display: inline-block;">Read Notes</a>
+                            </b:if>
+                        </div>
+                    </b:loop>
+                </b:includable>
+            </b:widget>
+        </b:section>
+    </div>
+
+    
+    <!-- C Programming Only View pdf CSS Style-->
+
+    
+<style>
+
+      /*-- Reset CSS Start Here --*/
+
+    /* html{
+        --body-font:'Open Sans', Arial, sans-serif;
+        --title-font:'Open Sans', Arial, sans-serif;
+        --meta-font:'Open Sans', Arial, sans-serif;
+        --text-font:'Open Sans', Arial, sans-serif;
+        --light-solid-color:#c1bbbb;
+        --black-color:#05ffee;
+        --hero-color:#aaaaaa;
+        --snippet-color:#aba4a4;
+        --solid-border:#ddd;
+        --white-bg:#ffffff;
+        --white-color:#ffffff;
+    }
+   */
+
+    .post-content a {   
+        color: #000000;
+    }
+
+    /* === ATTRACTIVE BUTTON STYLE === */
+    .btn {
+        text-decoration: none;
+        display: inline-block;
+        padding-block: 0.4em;
+        padding-inline: 0.7em;
+        background-color: #ccc;
+        color: var(--text-color);
+        width: 100%;
+        text-align: center;
+        border-radius: 5px; /* Rounded corners */
+        font-weight: 500;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.2); /* Subtle shadow */
+        border: none;
+    }
+
+    .btn:hover {
+        background-color: #1beffb; 
+        transform: translateY(-2px); 
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
+        cursor: pointer;
+    }
+
+    .soon,
+    .soonbtn {
+        background-color: var(--not-available-btn-color);
+    }
+
+    .soon {
+        padding-block: 0.75em;
+        padding-inline: 1em;
+        text-align: center;
+        color: var(--text-color);
+    }
+  
+    -- Custom 404 Error Page --
+    .error404 #feed-view{width:100%!important;margin:0!important}
+    .error404 #sidebar-container{display:none}
+    .errorPage{color:#000000;text-align:center;padding:80px 0 100px}
+    .errorPage h3{font-size:160px;line-height:1;margin:0 0 30px}
+    .errorPage h4{font-size:25px;margin:0 0 20px}
+    .errorPage p{margin:0 0 10px}
+    .errorPage a{display:block;color:#000000;padding:10px 0 0}
+    .errorPage a i{font-size:20px}
+    .errorPage a:hover{text-decoration:underline}
+
+    /*-- Extra Stylesheet Code for enhancing the Shortcut codes --*/
+    .firstword{float:left;color:#7a5a5a;font-size:70px;line-height:60px;padding-top:3px;padding-right:8px;padding-left:3px}
+    table{border-collapse:collapse;table-layout:fixed;width:100%!important;}
+    table td{border:solid 1px #fab;width:100px;word-wrap:break-word;}
+    .tg{border-collapse:collapse;border-spacing:0}
+    .tg td{font-family:Open Sans,sans-serif;font-size:14px;border:1px solid #000;background-color:#fff}
+    .main-button{float:left;padding:5px 12px;margin:5px;text-align:center;border:0;cursor:pointer;border-radius:3px;display:block;text-decoration:none;transition:all .3s ease-out!important;-webkit-transition:all .3s ease-out!important}
+    .main-button a{color:#fff;text-decoration:none;font-size:14px;font-weight:400;}
+    .main-button:hover{background-color:#2c3e50;color:#fff}
+    .main-button:before{font-family:'Font Awesome 5 Free';font-size:16px;font-weight:900;color:#fff;display:inline-block;margin:0 5px 0 0}
+    .button{background-color:#000000;}
+    .button:hover{background-color:#2c3e50;}
+    .buy{background-color:#9b23bd}
+    .buy:before{content:"\f09d";}
+    .cart{background-color:#00bed8}
+    .cart:before{content:"\f07a";}
+    .link{background-color:#2339bd}
+    .link:before{content:"\f0c1";}
+    .open{background-color:#ae099d}
+    .open:before{content:"\f07c";}
+    .info{background-color:#804b4b}
+    .info:before{content:"\f05a";}
+    .demo{background-color:#169c87}
+    .demo:before{content:"\f06e";}
+    .download{background-color:#1bc517}
+    .download:before{content:"\f019";}
+    .small-bt{padding:2px 15px;margin:5px;text-align:center;overflow:hidden;border:0;cursor:pointer;border-radius:3px;display:inline-block;text-decoration:none;transition:all .3s ease-out!important;-webkit-transition:all .3s ease-out!important}
+    .medium-bt{padding:5px 15px;margin:5px;text-align:center;overflow:hidden;border:0;cursor:pointer;border-radius:3px;display:inline-block;text-decoration:none;transition:all .3s ease-out!important;-webkit-transition:all .3s ease-out!important}
+    .large-bt{padding:10px 20px;margin:5px;text-align:center;overflow:hidden;border:0;cursor:pointer;border-radius:3px;display:inline-block;text-decoration:none;transition:all .3s ease-out!important;-webkit-transition:all .3s ease-out!important}
+    .small-bt a{font-size:10px;color:#fff;}
+    .medium-bt a{font-size:16px;color:#fff;}
+    .large-bt a{font-size:18px;color:#fff;}
+    .alert-message{position:relative;clear:both;display:inline-block;background-color:#293dc9;padding:20px;margin:20px 0;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;color:#2978c9;border:1px solid #ec6868}
+    .alert-message.success:before{content:"\f058";color:#13d864}
+    .alert-message:before{font-family:'Font Awesome 5 Free';font-size:16px;font-weight:600;display:inline-block;margin:0 5px 0 0}
+    .alert-message.passed:before{content:"\f1e3";color:#1984ce}
+    .alert-message.warning:before{content:"\f071";color:#c58519}
+    .alert-message.error:before{content:"\f06a";color:#d02615}
+    .alert-message.success{background-color:#f1f9f7;border-color:#e0f1e9;color:#1d9d74}
+    .alert-message.passed{background-color:#f5fbff;border:1px solid #7ebbe4}
+    .alert-message.alert{background-color:#daefff;border-color:#8ed2ff;color:#378fff}
+    .alert-message.warning{background-color:#fcf8e3;border-color:#faebcc;color:#8a6d3b}
+    .alert-message.error{background-color:#ffd7d2;border-color:#ff9494;color:#f55d5d}
+    .code-box{position:relative;display:block;color:#eaeaea;background-color:#0d1642;font-family:Monospace;font-size:13px;white-space:pre-wrap;line-height:1.4em;padding:10px;margin:0;border:1px solid rgba(155,155,155,0.3);border-radius:2px}
+    
+    .messenger-notice{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:.5em;
+        background-color:#ff0f0f;
+        font-size: .8rem;
+        margin-block:.6em;
+        border-radius:10px;
+        padding-block:15px;
+        color:#696969;
+        flex-wrap:wrap;
+        box-shadow: -1px 7px 8px 0 rgb(0 0 0 / 10%);
+    }
+    .messenger-notice a{
+        color: blue;
+        margin-left:.5em;
+    }
+
+    :root {
+        --title-size: 1.5rem;
+        --title-text: #e6a3a3;
+        --title-background: #2345f1; 
+        --table-heading: #194a64; 
+        --text-color: #ffffff;
+        --tr-odd-color: #2c3e50; 
+        --tr-even-color: #34495E; 
+        --available-btn-color: #1beffb; 
+        --not-available-btn-color: #5D6D7E; 
+    }
+
+    .topic_container * {
+        margin: 1.5;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .topic_container {
+        max-width: 100vw;
+        width: 100%;
+        margin-bottom: 0em;
+    }
+
+    .topic_container .topic_title {
+        padding-block: 0.2em;
+        padding-inline: 2em;
+        text-align: center;
+        background-color: var(--title-background);
+        color: var(--title-text);
+        font-size: var(--title-size);
+        font-family: Nunito, sans-serif;
+        font-weight: bold;
+    }
+
+    .topic_table {
+        width: 100%;
+        margin-block: 0em;
+        border-style: none;
+        overflow-x: scroll;
+        border: 0;
+    }
+
+    .topic_head {
+        background-color: var(--table-heading);
+    }
+
+    .topic_head tr,
+    .topic_body tr {
+        width: 100%;
+    }
+
+    .topic_body tr:nth-child(even) {
+        background-color: var(--tr-even-color);
+    }
+
+    .topic_body tr:nth-child(odd) {
+        background-color: var(--tr-odd-color);
+    }
+
+    .topic_head th,
+    .topic_body td {
+        text-align: left;
+        padding-block: 1em;
+        padding-inline: 1em;
+        color: var(--text-color);
+        width: 100%;
+        border: 0;
+    }
+
+    .topic_head th {
+        text-align-last: center;
+    }
+
+    .topic_body td:first-child {
+        word-break: break-all;
+    }
+
+    .topic_body td:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.4em;
+    }
+
+    .btn {
+        text-decoration: none;
+        display: inline-block;
+        padding-block: 0.35em;
+        padding-inline: 0.7em;
+        background-color: #2e5284;
+        color: var(--text-color);
+        width: 100%;
+        text-align: center;
+    }
+
+    /* .soon,
+    .soonbtn {
+        background-color: rgb(22 112 215);
+    }
+
+    .soon {
+        padding-block: 0.75em;
+        padding-inline: 1em;
+        text-align: center;
+        color: var(--text-color);
+    } */
+</style>
+    <section class="topic_container">
+        <h2 class="topic_title">Notes</h2>
+        <table class="topic_table">
+            <thead class="topic_head">
+                <tr>
+                    <th>Subject</th>
+                    <th>Links</th>
+                </tr>
+            </thead>
+            <tbody class="topic_body" id="noteBody">
+    
+                <!-- <tr>
+                    <td> Engineering Mathematics III</td>
+                    <td>
+                        <a class="btn"
+                            href=" https://www.arjun00.com.np/2023/08/engineering-mathematics-iii-new-0model-set-solution.html">Set
+                            Solu.</a>
+                        <a class="btn"
+                            href="  https://www.arjun00.com.np/2023/07/engineering-mathematics-iii-question-solution-third-semester-engineering-all.html">2078
+                            to 81 New Solu</a>
+                    </td>
+                </tr> -->
+    
+                 <!-- <tr>
+                    <td>Discrete Structure</td>
+                    <td>
+                        <a class="btn"
+                            href=" https://drive.google.com/uc?export=download&amp;id=1w34pU0jepu0jvCOV-ZLLrQiHj19i85i6">Notes</a>
+                        <a class="btn" href=" https://www.arjun0.com.np/2024/04/discrete-structure-solution.html ">2081 New
+                            Solu.</a>
+                    </td>
+                </tr> -->
+    
+                <!-- <tr>
+                    <td>Software Engineering</td>
+                    <td>
+                        <a class="btn"
+                            href="https://drive.google.com/uc?export=download&amp;id=1hC4LuiCUSUAhj2y-xBPYHVYDj5AhLdoF">
+                            Notes</a>
+                        <a class="btn" href=" https://www.arjun0.com.np/2024/04/software-engineering.html "> 2080 New
+                            Solu.</a>
+                    </td>
+                </tr> -->
+    
+                <!-- <tr>
+                    <td>PC Troubleshoot &amp; Maintenance</td>
+                    <td>
+                        <a class="btn"
+                            href="https://drive.google.com/uc?export=download&amp;id=1edfg6YMfFd7tV1CBCLY199GRvK6mjWnZ">Notes</a>
+                        <a class="btn" href=" https://www.arjun0.com.np/2024/04/pc-troubleshoot-and-maintenance.html ">2080
+                            New Solu.</a>
+                    </td>
+                </tr> -->
+    
+    
+                <!-- <tr>
+                    <td>Basic Electrical and Electronic Engineering</td>
+                    <td>
+                        <a class="btn"
+                            href="https://drive.google.com/uc?export=download&amp;id=175g1BlU5IzBCvjGhFt_LZMiJR2kXqCvv">Notes</a>
+                        <a class="btn"
+                            href=" https://www.arjun00.com.np/2024/04/basics-electrical-and-electronics.html ">2078 to 80
+                            New Solu.
+                        </a>
+                    </td>
+                </tr> -->
+    
+    
+                <tr>
+                    <td>Digital Logic</td>
+                    <td>
+                        <a class="btn"
+                            href="https://drive.google.com/file/d/1i0k5-_laSuE41glm0N2WsOrT6Tjujvho/preview">Handwritten
+                            Note </a>
+                        <a class="btn"
+                            href="https://drive.google.com/file/d/1rdTYWj8Ddv16PXvRT3LDGI9x8cbaBa_u/preview">2078 to
+                            80 New solu. 
+                        </a>
+                    </td>
+                </tr> 
+    
+                <!-- <tr>
+                    <td>C Programming </td>
+                    <td>
+                        <a class="btn"
+                            href="https://drive.google.com/file/d/1Rn9RmJ9BeCRclj-GkfmkSkVWEQneYIly/preview">Old Handwritten
+                            Notes</a>
+                        <a class="btn"
+                            href="https://drive.google.com/file/d/1kTHPc7ody_qxga2DI-NfCHkZ6J0QW_Zp/preview">New Handwritten
+                            Notes 1</a>
+                        <a class="btn"
+                            href="https://drive.google.com/file/d/1DNN6Wn6p9hiakCjO7ajwZ0eO9islZauJ/preview">New
+                            Notes 2</a>
+                        <a class="btn"
+                            href="https://drive.google.com/file/d/1gOgDqAWUCpZ91mY80h6QIT4Xwgb91aRb/preview">Syllabus-Wise
+                            Notes</a>
+                        <a class="btn" href="/CTEVT Course/DIT/C programming/sorry.html">2082 New
+                            Solu.
+                        </a>
+                    </td>
+                </tr> -->
+    
+                <!-- <tr>
+                    <td>Web Technology-I</td>
+                    <td>
+                        <a class="btn"
+                            href="https://drive.google.com/file/d/1ECQOP7Rjkx3e0UHptXWKqVAURkWxCHIQ/preview">Handwritten-
+                            Notes</a>
+                        <a class="btn"
+                            href="https://drive.google.com/file/d/1bPOV9nLVhKKSRD-dPPPvlMf1UyQKhSHR/preview">2078
+                            to 80 Solu.
+                        </a>
+                    </td>
+                </tr> -->
+    
+    
+               <!--- <tr>
+                    <td> Electronic Devices &amp; Circuits(old)</td>
+                    <td>
+                        <a class="btn"
+                            href=" https://drive.google.com/uc?export=download&amp;id=1ZZfaLJh_Mg-S9873p5icZBM06xa0XRwL">Notes</a>
+                        <a class="btn"
+                            href=" https://www.arjun00.com.np/2023/09/electronics-devices-and-circuits-new.html ">2078 to 80
+                            Solu.</a>
+                    </td>
+                </tr> -->
+    
+    
+                <!-- <tr>
+                    <td>Data Structure &amp; Algorithms</td>
+                    <td>
+    
+                        <a class="btn"
+                            href=" https://drive.google.com/uc?export=download&amp;id=1edfIRyFCGx_vJyiyOkKURpzIjnxsGQcf">
+                            Notes 1 </a>
+                        <a class="btn"
+                            href="https://drive.google.com/uc?export=download&amp;id=1mupOoypOhtdePaoGR74zwjTzOqr7wzbQ">
+                            Notes 2 </a>
+                        <a class="btn" href=" https://www.arjun00.com.np/2024/02/data-structure-and-algorithm.html "> 2080
+                            New Solu </a>
+    
+    
+                    </td>
+                </tr> -->
+    
+                <!-- <tr>
+                    <td>Microprocesor</td>
+                    <td>
+    
+                        <a class="btn" href="https://drive.google.com/uc?id=1I98btLuU0WisXiprLkHwSiPn73WmflE_"> Notes</a>
+                        <a class="btn"
+                            href=" https://www.arjun00.com.np/2023/09/microprocessors-new-solution-of-dcom-it.html">2078
+                            Solution </a>
+                        <a class="btn"
+                            href="https://www.arjun00.com.np/2024/09/microprocessor-and-computer-architecture.html">2080
+                            Solu. </a>
+                    </td>
+                </tr> -->
+    
+                <!-- <tr>
+                    <td>Web Technology &amp; Programming II</td>
+                    <td>
+                        <a class="btn" href="https://drive.google.com/uc?id=1VERBpRI7m_h4yjJSvxvTXu_8eo6Qb19b">old Notes</a>
+                        <a class="btn" href=" https://www.arjun00.com.np/2024/02/web-technology-ii-notes.html ">New
+                            Notes</a>
+                        <a class="btn"
+                            href=" https://www.arjun00.com.np/2024/02/web-technology-and-programming-ii.html ">2079,80
+                            Solu.</a>
+    
+                    </td>
+                </tr> -->
+    
+                <!-- <tr>
+                    <td>Database Management System</td>
+                    <td>
+                        <a class="btn" href="https://drive.google.com/uc?id=1B2nf0Tu105ENfazWEj7224nhNUHkzjHB">Notes </a>
+                        <a class="btn"
+                            href=" https://www.arjun00.com.np/2023/09/database-management-system-new-solution.html "> New
+                            Solution</a>
+                    </td>
+                </tr> -->
+    
+                <!-- <tr>
+                    <td>Computer Architecture</td>
+                    <td>
+                        <a class="btn"
+                            href="https://drive.google.com/uc?export=download&amp;id=1Y0QLr03lVue6gdy80aB_Z8JYYU414FNZ">
+                            Notes 
+                        </a>
+    
+                        <a class="btn"
+                            href="https://drive.google.com/uc?export=download&amp;id=1eLLB8VOrBIiQD4Kg8LJ52L1TDHFbzSYw">Solution
+                            Pdf
+                        </a>
+                        <a class="btn"
+                            href="https://drive.google.com/uc?export=download&amp;id=124Jh2mumRLjWtQAPghzvJb7F52tb2hUd">2077
+                            Solution
+                        </a>
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+    </section>
+    <!-- <hr style="border: 2px solid rgb(164, 164, 171); margin: 20px 0px;" /> -->
+
+
+    <style>
+        .Heading-title {
+            background-color: #e7e1e1;
+            color: #000;
+            font-size: 20px;
+            padding: 1px;
+            text-align: center;
+            margin-top: 0px;
+            font-weight: bold;
+            FONT-FAMILY: system-ui;
+        }
+    </style>
+
+    <!-- C Programming Only View pdf -->
+    <hr style="border: 2px solid rgb(164, 164, 171); margin: 0px 0px;" />
+    <div class="Heading-title">
+        <span style="color: red; font-size: 20px;">**</span>
+        <span style="color: red; font-size: 16px;">Due to High Misuse of the Solution.</span> We Closed the Download Options. Those who haven't yet purchase subscription.
+        <span style="color: #0013fb; font-size: 16px;">They Can Only View & print this solution.</span>
+        <span style="color: red; font-size: 20px;">**</span>
+    </div>
+
+    <hr style="border: 2px solid rgb(164, 164, 171); margin: 1px 0px;" />
+<!--     
+    <div class="separator" style="clear: both; text-align: center;">
+        <div style="clear: both; height: 620px; margin: auto; position: relative; text-align: center; width: 620px;">
+            <iframe allowfullscreen="allowfullscreen" frameborder="100px" scrolling="no" seamless=""
+                src="" width="640" height="500px">
+            </iframe>
+            <div style="height: 80px; opacity: 0; position: absolute; right: 0px; top: 0px; width: 80px;"></div>
+        </div>
+
+        <hr style="border: 2px solid rgb(164, 164, 171); margin: 20px 0px;" />
+        
+        <div class="Heading-title">
+            <span style="color: red; font-size: 24px;">**</span> 
+            <span style="color: red; font-size: 18px;"> 
+                स&#2379;ल&#2369;सनक&#2379; उच&#2381;च द&#2369;र&#2369;पय&#2379;गक&#2379;
+                क&#2366;रणल&#2375; गर&#2381;द&#2366;,
+            </span> ह&#2366;म&#2368;ल&#2375; ड&#2366;उनल&#2379;ड अप&#2381;सन बन&#2381;द
+                गर&#2375;क&#2379; छ&#2380;&#2306;&#2404; 
+            <span style="color: #0013fb; font-size: 20px;"> 
+                क&#2375;वलतप&#2366;ई&#2305;ल&#2375; व&#2375;बस&#2366;इटम&#2366; प&#2367;ड&#2367;एफ ह&#2375;र&#2381;न
+                सक&#2381;न&#2369;ह&#2369;न&#2381;छ&#2404; 
+            </span> धन&#2381;यव&#2366;द&#2404; 
+            <span style="color: red; font-size: 24px;">**</span>
+        </div>
+        <hr style="border: 2px solid rgb(164, 164, 171); margin: 20px 0px;" />
+    </div> -->
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <!-- My QR Code -->
+        <div class="qr-wrapper">
+            <div class="qr-box">        
+                <img src="/assets/images/myqr.png" alt="Support us via QR" />
+            </div>
+        </div>
+        <style>
+            .qr-wrapper {
+                display: flex;
+                justify-content: center;
+                margin: 7px 0;
+                margin-top: 0px !important;
+            }
+
+            .qr-box {
+                width: 460px;              /* SAME visual size as image-2 */
+                padding: 0px;
+                /* border: 1px dashed #333;   optional – remove if already in image */
+                border-radius: 10px;
+                background: #fff;
+                text-align: center;
+                }
+
+            .qr-box img {
+                width: 100%;               /* KEY LINE */
+                max-width: 420px;          /* prevents oversize */
+                height: auto;              /* prevents distortion */
+                display: block;
+                margin: auto;
+            }
+        </style>
+         <!-- <style>
+            #qr{
+                text-align: center;
+                /* position: absolute; */
+                /* justify-content: center; */
+                /* align-items: center; */
+            }
+            #qr img{
+                /* height: 200px; */
+            }
+         </style>
+        <hr style="border: 2px solid rgb(164, 164, 171); margin: 1px 0px;" />
+            
+            <div class="separator"
+                style="clear: both; height: auto; margin: auto; padding: auto; text-align: center; width: 620px;">
+                <div id="qr">
+                    <img alt="Support Us :-- A Small gift will help to maintain this website." border="0" data-original-height="588" data-original-width="1136" src="myqr2.png" 
+                        title="Support Us :-- A Small gift will help to maintain this website." width="600" />
+                </div>
+            </div>
+        <hr style="border: 2px solid rgb(164, 164, 171); margin: 1px 0px;" />
+            <style>
+                .wp-block-coblocks-alert {
+                    background-color: #bad9d7;
+                    border-radius: 15px;
+                    color: #000000;
+                    padding: 2px;
+                    Font-size: 12px;
+                }
+            </style>
+            <div aria-label="Alert section" class="wp-block-coblocks-alert">
+                <h4 style="text-align: center;">
+                    <span style="color: red;">**</span>
+                    <span>If anybody have (Old &amp; New) Question Paper / Notes or 
+                        <span style="color: red;">Any Problem </span>than Contact here :-&nbsp;
+                    </span>
+                    <a href="mailto:prabinhamal70@gmail.com">
+                        <span style="color: #2b00fe;">prabinhamal70@gmail.com</span>
+                    </a>
+                </h4>
+            </div>
+        <br/> -->
+
+        <b:section id='sidebar' showaddelement='yes'>
+            <b:widget id='HTML1' locked='false' title='Check Results' type='HTML'>
+                <b:includable id='main'>
+                    <div class="price-card" style="padding: 20px; text-align: left; margin-bottom: 20px;">
+                        <h3 style="font-size: 1.2rem;">Quick Links</h3>
+                        <ul style="margin-top: 10px;">
+                            <li style="margin-bottom: 10px;"><a href="https://www.arjun00.com.np/2023/10/ctevt-marksheet-check-for-all-faulty.html" style="color: var(--primary);"><i class="fas fa-external-link-alt"></i> Check CTEVT Result</a></li>
+                            <li style="margin-bottom: 10px;"><a href="#" style="color: var(--primary);"><i class="fas fa-calendar"></i> Academic Calendar</a></li>
+                            <li style="margin-bottom: 10px;"><a href="#" style="color: var(--primary);"><i class="fas fa-question-circle"></i> Entrance Model Qn</a></li>
+                        </ul>
+                    </div>
+                </b:includable>
+            </b:widget>
+            <b:widget id='Label1' locked='false' title='Categories' type='Label'>
+                <b:includable id='main'>
+                    <div class="price-card" style="padding: 20px; text-align: left;">
+                        <h3 style="font-size: 1.2rem;">Categories</h3>
+                        <ul style="margin-top: 10px;">
+                            <b:loop values='data:labels' var='label'>
+                                <li style="margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 5px;">
+                                    <a expr:href='data:label.url'><data:label.name/> (<data:label.count/>)</a>
+                                </li>
+                            </b:loop>
+                        </ul>
+                    </div>
+                </b:includable>
+            </b:widget>
+        </b:section>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-logo-box">
+            <h3>About Prabin00</h3>
+            <p>Assures your Better Quality Providing Best Service to our CTEVT Diploma Students is our Goal. Access Notes, Questions, and Solutions easily.</p>
+            <br/>
+            <div class="logo">
+                <a href="/">
+                    <img src="/assets/images/mylogo2.png" alt="Footer Logo" width="90">
+                </a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/p/about-us.html">About Us</a></li>
+                <li><a href="/p/contact-us.html">Contact Us</a></li>
+                <li><a href="/p/privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Faculty</h3>
+            <ul>
+                <li><a href="#">Diploma in I.T</a></li>
+                <li><a href="#">Diploma in Computer Engg</a></li>
+                <li><a href="#">Diploma in Civil Engg</a></li>
+                <li><a href="#">Diploma in Electrical Engg</a></li>
+                <li><a href="#">See All Courses</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Subscribe</h3>
+            <p>Get full access for lifetime.</p>
+            <button class="sub-btn gold" onclick="openModal()" style="margin-top: 10px;">Get Subscription</button>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; <span id="year"></span> Prabin00.com | All rights reserved. | Developed by Prabin Hamal
+    </div>
+</footer>
+
+<!-- Payment Modal (Hidden by default) -->
+<div class="modal" id="paymentModal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <h2 style="text-align: center; color: var(--primary);">Get Lifetime Access <i class="fas fa-crown" style="color: var(--gold);"></i></h2>
+        <p style="text-align: center; color: #666; margin-bottom: 20px;">Pay once, download forever.</p>
+        
+        <div style="text-align: center; margin-bottom: 20px;">
+            <span style="font-size: 18px; font-weight: bold;">Basic: Rs. 50</span> | 
+            <span style="font-size: 18px; font-weight: bold; color: var(--gold);">Advance: Rs. 70</span>
+        </div>
+
+        <div class="payment-content">
+                <h4>Payment Instructions:</h4>
+                <p>Choose your payment method and send the amount to the details below. After payment, email us at
+                    prabinhamal70@gmail.com.
+                    with proof for activation.
+                </p>
+        </div>
+        <h4>1. Send Money to:</h4>
+        
+        <div class="payment-method">
+            <!-- Replace src with your eSewa logo url -->
+            <img src="https://www.collegenp.com/uploads/2020/01/eSewa.png" alt="eSewa"> 
+            <div>
+                <strong>eSewa ID:</strong> <span style="color: var(--primary); font-weight: bold;">9768300612</span><br/>
+                <small>Name: Prabin Hamal</small>
+            </div>
+        </div>
+
+        <div class="payment-method">
+            <!-- Replace src with your Khalti logo url -->
+            <img src="https://th.bing.com/th/id/R.b2c3c82e2890203b7a4b0cfb188b3f71?rik=69LMjaxwb9Q32w&pid=ImgRaw&r=0" alt="Khalti"> 
+            <div>
+                <strong>Khalti ID:</strong> <span style="color: purple; font-weight: bold;">9768300612</span><br/>
+                <small>Name: Prabin Hamal</small>
+            </div>
+        </div>
+
+        <div class="payment-method">
+            <!-- <i class="fas fa-university" style="font-size: 30px; color: #555;"></i> -->
+             <img src="https://images.seeklogo.com/logo-png/61/1/nabil-bank-logo-png_seeklogo-613796.png" alt="Nabll Bank logo">
+            <div>
+                <strong>Bank Transfer:</strong><br/>
+                Nabil Bank Limited<br/>
+                Acc: **************<br/>
+                Account Holder Name: Prabin Hamal
+            </div>
+        </div>
+
+        <hr style="margin: 20px 0;"/>
+
+        <h4>2. Fill this Form:</h4>
+        <p style="font-size: 13px; color: #666; margin-bottom: 10px;">After payment, send the screenshot and your email here to get download access.</p>
+        
+        <!-- Replace the action with your Google Form URL or Contact Form script -->
+        <form name="payment-confirm" style="display: flex; flex-direction: column; gap: 10px;">
+            <input type="text" placeholder="Your Name" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="email" placeholder="Your Email (for access)" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="text" placeholder="Transaction ID / Remarks" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <button type="button" class="sub-btn" onclick="alert('Thank you! We will verify your payment and send the access link to your email within 1 hour.')">Confirm Payment</button>
+        </form>
+        
+        <p style="text-align: center; font-size: 12px; margin-top: 10px; color: #888;">
+            Access is granted manually after verification. <br/> Need help? <a href="mailto:info@arjun00.com.np" style="color: var(--primary);">Contact Support</a>
+        </p>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+    // Accordion Logic
+    function toggleAccordion(element) {
+        const body = element.nextElementSibling;
+        const icon = element.querySelector('i');
+        
+        // Close all others
+        const allBodies = document.querySelectorAll('.accordion-body');
+        const allIcons = document.querySelectorAll('.accordion-header i');
+        
+        allBodies.forEach(b => {
+            if(b !== body) b.classList.add('hidden');
+        });
+        allIcons.forEach(i => {
+            if(i !== icon) i.style.transform = 'rotate(0deg)';
+        });
+
+        // Toggle current
+        body.classList.toggle('hidden');
+        if(!body.classList.contains('hidden')) {
+            icon.style.transform = 'rotate(180deg)';
+        } else {
+            icon.style.transform = 'rotate(0deg)';
+        }
+    }
+
+    // Modal Logic
+    function openModal() {
+        document.getElementById('paymentModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+        document.getElementById('paymentModal').style.display = 'none';
+    }
+
+    // Close modal if clicked outside
+    window.onclick = function(event) {
+        const modal = document.getElementById('paymentModal');
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Mobile Menu
+    function toggleMenu() {
+        const nav = document.querySelector('.nav-links');
+        if (nav.style.display === 'flex') {
+            nav.style.display = 'none';
+        } else {
+            nav.style.display = 'flex';
+            nav.style.flexDirection = 'column';
+            nav.style.position = 'absolute';
+            nav.style.top = '70px';
+            nav.style.right = '0';
+            nav.style.background = 'white';
+            nav.style.width = '100%';
+            nav.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+            nav.style.padding = '20px';
+        }
+    }
+
+    // Set Copyright Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Prevent Right Click (Content Protection)
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    
+    // Prevent Keyboard Shortcuts for Save (Ctrl+S, Ctrl+P)
+    document.onkeydown = function(e) {
+        if(e.ctrlKey && (e.keyCode === 83 || e.keyCode === 80 || e.keyCode === 85)) {
+            alert('This content is protected. Please buy a subscription to download/print.');
+            return false;
+        }
+    };
+</script>
+
+</body>
+</html>

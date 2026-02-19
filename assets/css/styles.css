@@ -1,0 +1,360 @@
+:root {
+    --primary: #2563eb;       /* Modern Blue */
+    --secondary: #1e40af;     /* Darker Blue */
+    --accent: #10b981;        /* Green for Success/Money */
+    --dark: #1f2937;
+    --light: #f3f4f6;
+    --white: #ffffff;
+    --gold: #f59e0b;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --radius: 12px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
+
+/* --- Header & Navigation --- */
+header {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img { height: 40px; }
+
+.nav-links { display: flex; gap: 20px; }
+.nav-links a { font-weight: 500; color: var(--dark); font-size: 15px; }
+.nav-links a:hover { color: var(--primary); }
+
+.premium-btn {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: #fff !important;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
+    animation: pulse 2s infinite;
+    transition: background 0.6s;
+}
+
+.premium-btn:hover{
+    background: rgb(107, 231, 88);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.mobile-menu-btn { display: none; font-size: 24px; cursor: pointer; }
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 0 0 30px 30px;
+    margin-bottom: 30px;
+}
+
+.hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+.hero p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto 25px; }
+
+/* --- Pricing/Subscription Section --- */
+.pricing-section {
+    max-width: 1000px;
+    margin: -50px auto 40px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.price-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 2px solid transparent;
+    transition: transform 0.3s;
+}
+
+.price-card:hover{
+    transform: translateY(-6px);
+}
+
+.featured:hover{
+    transform: translateY(-6px);
+}
+.price-card.featured {
+    border-color: var(--gold);
+    transition: transform 0.3s;
+}
+
+.price-card h3 { font-size: 1.5rem; margin-bottom: 10px; color: var(--dark); }
+.price { font-size: 2.5rem; font-weight: 700; color: var(--primary); margin-bottom: 20px; }
+.price span { font-size: 1rem; color: #666; font-weight: 400; }
+.features { text-align: left; margin-bottom: 25px; }
+.features li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+.features i { color: var(--accent); }
+.features .locked { color: #dc2626; }
+
+.sub-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sub-btn:hover{
+    background-color: #70c434;
+}
+
+.sub-btn.gold { 
+    background: var(--gold); color: #000; 
+    transition: background 0.3s;
+}
+
+.sub-btn.gold:hover{
+    background-color: aqua;
+}
+
+/* --- Main Content Layout --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.main-content { flex: 3; }
+.sidebar { flex: 1; }
+
+/* --- Accordion Design (Notes) --- */
+.course-section { margin-bottom: 40px; }
+.section-title { 
+    font-size: 1.5rem; 
+    border-left: 5px solid var(--primary); 
+    padding-left: 15px; 
+    margin-bottom: 20px; 
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    box-shadow: var(--shadow);
+}
+
+.accordion-item {
+    background: var(--white);
+    margin-bottom: 10px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.accordion-header {
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.accordion-header:hover { background: #f9fafb; color: var(--primary); }
+.accordion-header i { transition: transform 0.3s; }
+.accordion-header.active i { transform: rotate(180deg); }
+
+.accordion-body {
+    display: none;
+    padding: 15px;
+    background: #f8fafc;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Initially Hidden via CSS, JS toggles this */
+.accordion-body.hidden { display: none; }
+.accordion-body.show { display: flex; }
+
+.note-link {
+    flex: 1 1 calc(33.33% - 10px);
+    background: var(--white);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.note-link:hover { border-color: var(--primary); color: var(--primary); }
+
+/* --- Post Content & PDF Protection --- */
+.post-content {
+    background: var(--white);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* PDF Wrapper to prevent right click */
+.pdf-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background: #000;
+}
+
+.pdf-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 10;
+    background: transparent;
+}
+
+.download-lock {
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: var(--radius);
+}
+
+.download-btn-locked {
+    background: #ccc;
+    color: #666;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: not-allowed;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- Payment Modal --- */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+}
+
+.payment-method {
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #eee;
+}
+
+.payment-method img { width: 50px; height: 50px; object-fit: contain; }
+
+/* --- Footer --- */
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.footer-col h3 { color: var(--white); margin-bottom: 20px; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a { color: #d1d5db; }
+.footer-col ul li a:hover { color: var(--white); padding-left: 5px; color: aqua; background-color: #1d1313;}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #374151;
+    color: #9ca3af;
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 768px) {
+    .container { flex-direction: column; }
+    .nav-links { display: none; } 
+    .mobile-menu-btn { display: block; }
+    .hero h1 { font-size: 1.8rem; }
+    .pricing-section { margin-top: 0; }
+    .price-card.featured { transform: none; }
+}

@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta charset='utf-8'/>
+<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<title>Prabin00 - CTEVT Diploma Engineering Notes & Solutions</title>
+<meta content='Diploma in Computer, Civil, Electrical Engineering Notes, Question Papers, Solutions for CTEVT Nepal. Premium Access available.' name='description'/>
+
+<!-- Google Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- <link rel="icon" type="image/png" href="/assets/images/fevicon2.png"> -->
+<link rel="icon" type="image/png" href="/assets/images/fevicon3.png">
+
+<!-- CSS Styles link -->
+<link rel="stylesheet" href="/assets/css/styles.css">
+
+<!-- Javascript links -->
+<script src="/assets/js/scripts.js" defer></script>
+
+
+</head>
+<body>
+
+<!-- Navigation -->
+<header>
+    <div class="navbar">
+        <a href="/" class="logo">
+            <img src="/assets/images/mylogo2.png" alt="Prabin00 Logo" width="90">
+            <span>Prabin00</span>
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/ctevt/" onclick="goToCTEVT(event)">Select-Faculty</a>
+            <a href="/cte">Check-Results</a>
+            <a href="#" onclick="openModal()">Pricing</a>
+            <a href="#" class="premium-btn" onclick="openModal()">
+                <i class="fas fa-crown"></i> Go Premium
+            </a>
+        </div>
+        <div class="mobile-menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    </div>
+</header>
+
+<script>
+    function goToCTEVT(e) {
+        e.preventDefault(); // anchor default behavior रोक्न
+        document.getElementById("All-Faculty")
+            .scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }
+</script>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>CTEVT Diploma Engineering Notes</h1>
+    <p>Get access to high-quality notes, question papers, and solutions/pdf for Civil, I.T, Computer, Electrical, and more. Upgrade to premium for unlimited downloads!</p>
+    <div style="margin-top: 20px;">
+        <button class="sub-btn gold" style="width: auto; padding: 10px 30px;" onclick="openModal()">Get Lifetime Access</button>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing-section">
+    <!-- Free Plan -->
+    <div class="price-card">
+        <h3>Free Access</h3>
+        <div class="price">Rs. 0<span>/forever</span></div>
+        <ul class="features">
+            <li><i class="fas fa-check"></i> Read Online (PDF Viewer)</li>
+            <li><i class="fas fa-check"></i> Access all Subjects</li>
+            <li class="locked"><i class="fas fa-times"></i> <span style="text-decoration: line-through;">Print Disabled</span></li>
+            <li class="locked"><i class="fas fa-times"></i> <span style="text-decoration: line-through;">Download PDF Files</span></li>
+            <li class="locked"><i class="fas fa-times"></i> <span style="text-decoration: line-through;">Offline Access</span></li>
+        </ul>
+        <button class="sub-btn" style="background: #e5e7eb; color: #333;">Current Plan</button>
+    </div>
+
+    <!-- Basic Plan -->
+    <div class="price-card">
+        <h3>Basic Plan</h3>
+        <div class="price">Rs. 50<span>/lifetime</span></div>
+        <ul class="features">
+            <li><i class="fas fa-check"></i> <b>Download Limitations </b></li>
+            <li><i class="fas fa-check"></i> Offline Access</li>
+            <li><i class="fas fa-check"></i> High Quality Prints</li>
+            <li><i class="fas fa-check"></i> 1 Semester Access</li>
+        </ul>
+        <button class="sub-btn" onclick="openModal()">Buy Now</button>
+    </div>
+
+    <!-- Advance Plan -->
+    <div class="price-card featured">
+        <div style="background: var(--gold); color: #000; font-size: 12px; display: inline-block; padding: 2px 10px; border-radius: 10px; margin-bottom: 10px;">MOST POPULAR</div>
+        <h3>Advance Plan</h3>
+        <div class="price">Rs. 70<span>/lifetime</span></div>
+        <ul class="features">
+            <li><i class="fas fa-check"></i> <b>Download Everything</b></li>
+            <li><i class="fas fa-check"></i> High Quality Prints</li>
+            <li><i class="fas fa-check"></i> All Semesters included</li>
+            <li><i class="fas fa-check"></i> All Subjects included</li>
+            <li><i class="fas fa-check"></i> Priority Support</li>
+            <li><i class="fas fa-check"></i> Entrance Model Questions</li>
+        </ul>
+        <button class="sub-btn gold" onclick="openModal()">Buy Now</button>
+    </div>
+</section>
+
+<!-- Main Container
+<div class="container">
+    <div class="main-content">
+        
+        Blog Posts Loop (Blogger Syntax)
+        <b:section id='main' showaddelement='yes'>
+            <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+                <b:includable id='main' var='top'>
+                    <b:loop values='data:posts' var='post'>
+                        Post Content
+                        <div class='post-content' style="margin-bottom: 30px;">
+                            <h2 style="margin-bottom: 15px;"><a expr:href='data:post.url'><data:post.title/></a></h2>
+                            
+                            If it's a single post page, show full content with protection
+                            <b:if cond='data:blog.pageType == "item"'>
+                                <div class="post-body">
+                                    <div class="alert-box" style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid var(--primary);">
+                                        <i class="fas fa-info-circle"></i> <b>Note:</b> Free users can read below. To download the PDF, please purchase a subscription.
+                                    </div>
+                                    
+                                    PDF Viewer Embed Wrapper (Prevent Copy)
+                                    <div class="pdf-container" oncontextmenu="return false;">
+                                        <data:post.body/>
+                                    </div>
+
+                                    Download Lock Section
+                                    <div class="download-lock">
+                                        <h3><i class="fas fa-lock"></i> Download Locked</h3>
+                                        <p>Downloads are reserved for Premium Members.</p>
+                                        <br/>
+                                        <button class="sub-btn gold" style="width: auto; padding: 10px 40px;" onclick="openModal()">Unlock Download (Rs. 50/70)</button>
+                                    </div>
+                                </div>
+                            <b:else/>
+                                Snippet for Homepage
+                                <p><data:post.snippet/></p>
+                                <a class="sub-btn" expr:href='data:post.url' style="width: auto; padding: 8px 20px; margin-top: 10px; display: inline-block;">Read Notes</a>
+                            </b:if>
+                        </div>
+                    </b:loop>
+                </b:includable>
+            </b:widget>
+        </b:section>
+    </div>
+</div> -->
+
+    <div class='widget HTML' data-version='1' id='HTML7'>
+        <div class='widget-content'>
+            <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                background-color: #EDF2F7;
+                color: #1F2937;
+                font-family: Arial, sans-serif;
+            }
+            .sems .title {
+                text-align: center;
+                background: #2D3748;
+                padding: 10px 0;
+                color: #f00a0a;
+                font-weight: bold;
+                font-size: 18px;
+                margin: 3px 35px;
+                border-radius: 6px;
+            }
+    
+            .sems .sem {
+                display: flex;
+                flex-direction: column;
+            }
+    
+            .sems .sem a,
+            .accordion-body a {
+                margin: 3px 35px;
+                background-color: #3B82F6;
+                padding: 10px 0;
+                color: #ffffff;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 17px;
+                text-align: center;
+                border-radius: 6px;
+                transition: background-color 0.3s ease, transform 0.2s;
+            }
+    
+            .sems .sem a:hover,
+            .accordion-body a:hover {
+                background-color: #10B981;
+                transform: scale(1.02);
+                color: #ffffff;
+            }
+    
+            .accordion {
+                margin: 3px 35px;
+            }
+    
+            .accordion-item {
+                border: none;
+                border-radius: 6px;
+                margin-bottom: 10px;
+                overflow: hidden;
+            }
+    
+            .accordion-header {
+                margin: 3px 0;
+                background-color: #3B82F6;
+                color: #ffffff;
+                padding: 10px 0;
+                text-align: center;
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 17px;
+                border-radius: 6px;
+                transition: background-color 0.3s ease, transform 0.2s;
+                position: relative;
+            }
+    
+            .accordion-header::after {
+                content: '\25BC';
+                position: absolute;
+                right: 20px;
+                transition: transform 0.3s ease;
+            }
+    
+            .accordion-header.active::after {
+                transform: rotate(180deg);
+            }
+    
+            .accordion-header:hover {
+                background-color: #10B981;
+                transform: scale(1.02);
+            }
+    
+            .accordion-body {
+                padding: 10px 0;
+                display: none;
+                background-color: #EDF2F7;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+    
+            .accordion-body a {
+                flex: 0 1 200px;
+                margin: 5px;
+            }
+            </style>
+    
+            <!-- CTEVT Section -->
+            <div class="sems">
+                <div class="title">CTEVT Section</div>
+                <div class="sem">
+                    <a href="https://www.arjun00.com.np/2023/10/ctevt-marksheet-check-for-all-faulty.html">Check
+                        Your Result</a>
+                    <a href="https://itms.ctevt.org.np:5580/notices">Notice Board</a>
+                    <a href="https://drive.google.com/file/d/1S1-QyCKOWN8FNPftUoLgWwlSctizBgsX/view?usp=drive_link">2082/83
+                        Academic Calender</a>
+                    <a href="https://www.arjun0.com.np/2024/07/ctevt-entrance-model-question-menu.html">CTEVT
+                        Entrance Model Question</a>
+                </div>
+            </div>
+            <br /><br />
+    
+            <!-- CTEVT COURSE -->
+            <div class="sems">
+                <div class="title" id="All-Faculty">CTEVT COURSE:
+                    <div class="sem">
+                        <a href="https://www.arjun00.com.np/2024/03/menu-diploma-in-engineering-all.html">Engineering
+                            All</a>
+                        <a href="https://www.arjun00.com.np/p/diploma-in-computer-engineering-all.html">Computer
+                            Engineering</a>
+                        <a href="/ctevt/DIT/">Information
+                            Technology</a>
+                        <a href="https://www.arjun00.com.np/p/menu-diploma-in-civil-engineering-all.html">Civil
+                            Engineering</a>
+                        <a href="https://www.arjun00.com.np/p/diploma-in-electrical-engineering-dee.html">Electrical
+                            Engineering</a>
+                        <a href="https://www.arjun00.com.np/2023/07/Diploma-in-Geomatics-Engineering-DGE-Menu-All-Semester-Question-Paper-DGE-CTEVT-Diploma.html">Geomatics
+                            Engineering</a>
+                        <a href="https://www.arjun00.com.np/2024/02/diploma-in-architecture-engineering.html">Architecture
+                            Engineering</a>
+                        <a href="https://www.arjun00.com.np/2024/08/menu-diploma-in-mechanical-engineering.html">Mechanical
+                            Engineering</a>
+                    </div>
+                </div>
+            </div>
+            <br /><br />
+            <br />
+            <br />
+    
+            <div class="sems">
+                <div class="title">Engineering All </div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">New Syllabus</div>
+                        <div class="accordion-body">
+                            <a href=" https://www.arjun00.com.np/2024/03/first-semester-diploma-in-engineering.html">1st Semester</a>
+                            <a href=" https://www.arjun00.com.np/2024/03/second-semester-diploma-in-engineering.html ">2nd Semester</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="sems">
+                <div class="title">Computer Engineering </div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">DCOM-Semesters</div>
+                        <div class="accordion-body">
+                            <a href=" https://www.arjun00.com.np/2023/03/first-semester-diploma-in-computer.html">1st
+                                Semester</a>
+                            <a href="https://www.arjun00.com.np/2023/03/second-semester-diploma-in-computer.html">2nd
+                                Semester</a>
+                            <a href="https://www.arjun00.com.np/2023/03/third-semester-diploma-in-computer.html">3rd
+                                Semester</a>
+                            <a href="https://www.arjun00.com.np/p/fourth-semester-diploma-in-computer_16.html">4th
+                                Semester</a>
+                            <a href="https://www.arjun00.com.np/p/fifth-semester-diploma-in-computer_16.html">5th
+                                Semester</a>
+                            <a href="https://www.arjun00.com.np/p/sixth-semester-diploma-in-computer_16.html">6th
+                                Semester
+                            </a>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+    
+            <div class="sems">
+                <div class="title">Information Technology </div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">IT-Semesters</div>
+                        <div class="accordion-body">
+                            <a href=" https://www.arjun00.com.np/2023/03/first-semester-diploma-in-computer.html">1st
+                                Semester</a>
+                            <a href="https://www.arjun00.com.np/2023/03/second-semester-diploma-in-computer.html">2nd
+                                Semester</a>
+                            <a href="https://www.arjun00.com.np/2023/03/third-semester-diploma-in-computer.html">3rd
+                                Semester</a>
+                            <a href="https://www.arjun00.com.np/2023/05/fourth-semester-diploma-in-information.html">4th
+                                Semester</a>
+                            <a href="https://www.arjun00.com.np/2023/05/fifth-semester-diploma-in-information.html">5th
+                                Semester</a>
+                            <a href=" https://www.arjun00.com.np/2023/05/sixth-semester-diploma-in-information.html">6th
+                                Semester
+                            </a>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="sems">
+                <div class="title">Civil Engineering </div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">DCE-Semesters</div>
+                        <div class="accordion-body">
+                            <a href=" https://www.arjun00.com.np/2023/03/first-semester-diploma-in-civil.html">1st
+                                Semester</a>
+                            <a href=" https://www.arjun00.com.np/2023/03/second-semester-diploma-in-civil.html ">2nd
+                                Semester</a>
+                            <a href=" https://www.arjun00.com.np/2023/03/third-semester-diploma-in-civil.html ">3rd
+                                Semester</a>
+                            <a href=" https://www.arjun00.com.np/2023/03/fourth-semester-diploma-in-civil.html">4th
+                                Semester</a>
+                            <a href=" https://www.arjun00.com.np/2023/03/diploma-in-civil-engineering-fifth.html ">5th
+                                Semester</a>
+                            <a href=" https://www.arjun00.com.np/2023/03/diploma-in-civil-engineering-sixth.html ">6th
+                                Semester</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="sems">
+                <div class="title">Electrical Engineering </div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">DEE-Semesters</div>
+                        <div class="accordion-body">
+                            <a href=" https://www.arjun00.com.np/p/first-semester-diploma-in-electrical.html">1st
+                                Semester</a>
+                            <a href=" https://www.arjun00.com.np/p/second-semester-diploma-in-electrical.html ">2nd
+                                Semester</a>
+                            <a href=" https://www.arjun00.com.np/p/third-semester-diploma-in-electrical.html">3rd
+                                Semester</a>
+                            <a href=" https://www.arjun00.com.np/p/fourth-semester-diploma-in-electrical.html ">4th
+                                Semester</a>
+                            <a href=" https://www.arjun00.com.np/p/fifth-semester-diploma-in-electrical.html ">5th
+                                Semester</a>
+                            <a href=" https://www.arjun00.com.np/p/sixth-semester-diploma-in-electrical.html ">6th
+                                Semester</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="sems">
+                <div class="title">Architecture engineering </div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">DAR-Semesters</div>
+                        <div class="accordion-body">
+                            <a href=" https://www.arjun00.com.np/2024/03/first-semester-diploma-in-engineering.html">1st
+                                Semester</a>
+                            <a href="  https://www.arjun00.com.np/2024/03/second-semester-diploma-in-engineering.html">2nd
+                                Semester</a>
+                            <a href=" https://www.arjun00.com.np/2024/03/third-semester-diploma-in-architecture.html ">3rd
+                                Semester</a>
+                            <a href="  https://www.arjun00.com.np/2024/06/fourth-semester-diploma-in-architecture.html">4th
+                                Semester</a>
+                            <a href=" https://www.arjun00.com.np/2024/06/fifth-semester-diploma-in-architecture.html ">5th
+                                Semester</a>
+                            <a href=" https://www.arjun00.com.np/2024/02/sixth-semeter-diploma-in-architecture.html">6th
+                                Semester</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="sems">
+                <div class="title">Mechanical Engineering </div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">DME-Semesters</div>
+                        <div class="accordion-body">
+                            <a href=" https://www.arjun00.com.np/2024/03/first-semester-diploma-in-engineering.html">1st
+                                Semester</a>
+                            <a href="  https://www.arjun00.com.np/2024/03/second-semester-diploma-in-engineering.html">2nd
+                                Semester</a>
+                            <a href=" https://www.arjun00.com.np/2025/01/third-semester-diploma-in-mechanical.html ">3rd
+                                Semester</a>
+                            <a href="  https://www.arjun00.com.np/2024/08/fourth-semester-diploma-in-mechanical-engineering.html ">4th
+                                Semester</a>
+                            <a href="https://www.arjun00.com.np/2025/01/fifth-semester-diploma-in-mechanical.html">5th
+                                Semester</a>
+                            <a href="  https://www.arjun00.com.np/2024/11/sixth-semester-diploma-in-mechanical.html ">6th
+                                Semester</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    // Ensure all accordion bodies are hidden initially
+                    document.querySelectorAll(".accordion-body").forEach(body => {
+                        body.style.display = "none";
+                    });
+                });
+                function toggleAccordion(element) {
+                    const body = element.nextElementSibling;
+                    const isActive = element.classList.contains("active");
+
+                    // Close all open accordions
+                    document.querySelectorAll(".accordion-body").forEach(b => b.style.display = "none");
+                    document.querySelectorAll(".accordion-header").forEach(h => h.classList.remove("active"));
+                    // Open the clicked one if it was not already active
+                    if (!isActive) {
+                        body.style.display = "flex";
+                        element.classList.add("active");
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    <div class='clear'></div>
+    </div></div>
+
+    <!-- Frequently Asked Questions CSS Starts Here-->
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+
+        h2.faq-heading {
+            font-family: "Inter", sans-serif;
+            text-align: center;
+            font-weight: 300;
+            font-size: 28px;
+            color: #1d3557;
+            margin: 8px 0;
+            margin-top: 60px;
+        }
+
+        .faq-container {
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 50px -8px rgba(0, 0, 0, 0.3);
+            margin: 32px auto;
+            font-family: "Inter", sans-serif;
+            color: #1d3557;
+            line-height: 1.9;
+        }
+
+        .faq-container .question-container {
+            border-bottom: 1px solid #eee;
+        }
+
+        .faq-container .question {
+            display: flex;
+            justify-content: space-between;
+            gap: 32px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 16px 24px;
+            cursor: pointer;
+        }
+
+        .faq-container .question .question-icon {
+            width: 20px;
+            height: 20px;
+            background: #eee;
+            padding: 4px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            transition: all 300ms ease;
+        }
+
+        .faq-container .question-container.expanded .question-icon {
+            background: #2a9d8f;
+            color: #fff;
+            transform: rotateZ(180deg);
+        }
+
+        .faq-container .answer {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin: 8px 0;
+        }
+
+        .faq-container .answer .answer-icon {
+            width: 20px;
+            flex-shrink: 0;
+            color: blue;
+            display: flex;
+            margin-top: 5px;
+        }
+
+        .faq-container .answer-container {
+            padding: 0px 32px;
+            background: #edf2f4;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 300ms ease;
+        }
+
+        .faq-container .question-container.expanded .answer-container {
+            max-height: 500px;
+            padding: 8px 32px;
+        }
+    </style>
+
+    <h2 class="faq-heading">Frequently Asked Questions</h2>
+    <div class="faq-container"></div>
+    <script>
+        const FAQData = [
+            {
+                question: "What is the purpose of this education website? ",
+                answer: [
+                "Our  website  is  dedicated  to  providing  educational  resources,  tools,  and  information  to  help  students,  parents,  and  educators  navigate  the  world  of  learning  more  effectively.",
+                
+                ],
+            },
+  
+            {
+                question: "How can I access or download content (solutions) from Prabin00?  ",
+                answer: [
+                "Due to some security issues, you can only view and print the solutions until you purchase our subscription",
+                ],
+            },
+  
+            {
+                question: "  How can I get in touch with your team if I have questions or feedback? ",
+                answer: [
+                "You can contact us through the  'Contact Us page' on our website. We value your feedback and are here to assist you with any questions or concerns you may have.",
+                ],
+            },
+            {
+                question: "How can I contribute to the support of your website?",
+                answer: [
+                " If you can, please donate to help us keep making and improving content.  Your support means a lot, and we appreciate your involvement!",
+                ],
+            },
+            {
+                question: "How can I find relevant educational content on this website?",
+                answer: [
+                " You can use the search bar to look for specific topics or browse through our categories and subject areas to discover content that interests you.",
+                ],
+            },
+            {
+                question: " Is there a mobile app available for your website? ",
+                answer: [
+                " Currently, we do not have a dedicated mobile app, but our website is mobile-responsive, so you can access it easily from your smartphone or tablet's web browser.",
+                ],
+            },
+            
+            {
+                question: " Can I submit my own educational content to your website?",
+                answer: [
+                "If you have educational content you'd like to share, please contact us via email , and we'll review it for possible addition on our site.",
+                ],
+            },
+        ];
+
+        const FAQContainer = document.querySelector(".faq-container");
+
+        const removeAllExpanded = () => {
+        const questionContainers = document.querySelectorAll(
+            ".faq-container .question-container"
+        );
+
+        questionContainers.forEach((q) => {
+            q.classList.remove("expanded");
+            const answerContainer = q.querySelector(".answer-container");
+            answerContainer.style.maxHeight = "0";
+        });
+        };
+
+        const displayFAQ = () => {
+        FAQData.forEach((q) => {
+            const answerHTML = q.answer
+            .map(
+        (a) => `<div class="answer">
+        <span class="answer-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="w-5 h-5"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </span>
+        ${a}
+      </div>`
+      )
+      .join("");
+
+        const html = `<div class="question">
+            ${q.question}
+            <span class="question-icon">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                />
+                </svg>
+            </span>
+        </div>
+
+        <div class="answer-container">
+          ${answerHTML}
+        </div>`;
+
+        const questionContainer = document.createElement("div");
+        questionContainer.classList.add("question-container");
+        questionContainer.innerHTML = html;
+
+            FAQContainer.appendChild(questionContainer);
+
+            const question = questionContainer.querySelector(".question");
+
+            question.addEventListener("click", () => {
+            if (!questionContainer.classList.contains("expanded")) {
+                removeAllExpanded();
+            }
+
+            questionContainer.classList.toggle("expanded");
+            const isExpanded = questionContainer.classList.contains("expanded");
+
+            const answerContainer =
+                questionContainer.querySelector(".answer-container");
+            const contentHeight = answerContainer.scrollHeight;
+            answerContainer.style.maxHeight = isExpanded ? `${contentHeight}px` : "0";
+            });
+        });
+        };
+
+        displayFAQ();
+    </script>
+    </div>
+    <div class='clear'></div>
+    </div></div>
+    <div class='no-items section' id='Home-design' name='Home Section 4'></div>
+    </div>
+       
+    <!-- My home page qr image -->
+    <div style="text-align: center;">
+        <hr style="border: 2px solid rgb(164, 164, 171); margin: 0px 0px;">
+        <img alt="Support us on Fone Pay. A Small gift will help to maintain this website." height="auto" src="/assets/images/myqr.png" width="430"/>
+        <hr style="border: 2px solid rgb(164, 164, 171); margin-bottom: 10px;">
+    </div>
+                    
+
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <b:section id='sidebar' showaddelement='yes'>
+            <b:widget id='HTML1' locked='false' title='Check Results' type='HTML'>
+                <b:includable id='main'>
+                    <div class="price-card" style="padding: 20px; text-align: left; margin-bottom: 20px;">
+                        <h3 style="font-size: 1.2rem;">Quick Links</h3>
+                        <ul style="margin-top: 10px;">
+                            <li style="margin-bottom: 10px;"><a href="https://www.arjun00.com.np/2023/10/ctevt-marksheet-check-for-all-faulty.html" style="color: var(--primary);"><i class="fas fa-external-link-alt"></i> Check CTEVT Result</a></li>
+                            <li style="margin-bottom: 10px;"><a href="#" style="color: var(--primary);"><i class="fas fa-calendar"></i> Academic Calendar</a></li>
+                            <li style="margin-bottom: 10px;"><a href="#" style="color: var(--primary);"><i class="fas fa-question-circle"></i> Entrance Model Qn</a></li>
+                        </ul>
+                    </div>
+                </b:includable>
+            </b:widget>
+            <b:widget id='Label1' locked='false' title='Categories' type='Label'>
+                <b:includable id='main'>
+                    <div class="price-card" style="padding: 20px; text-align: left;">
+                        <h3 style="font-size: 1.2rem;">Categories</h3>
+                        <ul style="margin-top: 10px;">
+                            <b:loop values='data:labels' var='label'>
+                                <li style="margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 5px;">
+                                    <a expr:href='data:label.url'><data:label.name/> (<data:label.count/>)</a>
+                                </li>
+                            </b:loop>
+                        </ul>
+                    </div>
+                </b:includable>
+            </b:widget>
+        </b:section>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h3>About Prabin00</h3>
+            <p>Assures your Better Quality Providing Best Service to our CTEVT Diploma Students is our Goal. Access Notes, Questions, and Solutions easily.</p>
+            <br/>
+            <div class="logo">
+                <a href="/"><img src="/assets/images/mylogo2.png" alt="Footer Logo" width="60" height="90"></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/p/about-us.html">About Us</a></li>
+                <li><a href="/p/contact-us.html">Contact Us</a></li>
+                <li><a href="/p/privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Faculty</h3>
+            <ul>
+                <li><a href="#">Diploma in I.T</a></li>
+                <li><a href="#">Diploma in Computer Engg</a></li>
+                <li><a href="#">Diploma in Civil Engg</a></li>
+                <li><a href="#">Diploma in Electrical Engg</a></li>
+                <li><a href="#">See All Courses</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Subscribe</h3>
+            <p>Get full access for lifetime.</p>
+            <button class="sub-btn gold" onclick="openModal()" style="margin-top: 10px;">Get Subscription</button>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; <span id="year"></span> Prabin00.com | All rights reserved. | Developed by Prabin Hamal
+    </div>
+</footer>
+
+<!-- Payment Modal (Hidden by default) -->
+<div class="modal" id="paymentModal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <h2 style="text-align: center; color: var(--primary);">Get Lifetime Access <i class="fas fa-crown" style="color: var(--gold);"></i></h2>
+        <p style="text-align: center; color: #666; margin-bottom: 20px;">Pay once, download forever.</p>
+        
+        <div style="text-align: center; margin-bottom: 20px;">
+            <span style="font-size: 18px; font-weight: bold;">Basic: Rs. 50</span> | 
+            <span style="font-size: 18px; font-weight: bold; color: var(--gold);">Advance: Rs. 70</span>
+        </div>
+
+        <div class="payment-content">
+            <h4>Payment Instructions:</h4>
+            <p>Choose your payment method and send the amount to the details below. After payment, email us at
+                prabinhamal70@gmail.com.
+                with proof for activation.
+            </p>
+        </div>
+        <h4>1. Send Money to:</h4>
+        
+        <div class="payment-method">
+            <!-- Replace src with your eSewa logo url -->
+            <img src="https://www.collegenp.com/uploads/2020/01/eSewa.png" alt="eSewa"> 
+            <div>
+                <strong>eSewa ID:</strong> <span style="color: var(--primary); font-weight: bold;">9768300612</span><br/>
+                <small>Name: Prabin Hamal</small>
+            </div>
+        </div>
+
+        <div class="payment-method">
+            <!-- Replace src with your Khalti logo url -->
+            <img src="https://th.bing.com/th/id/R.b2c3c82e2890203b7a4b0cfb188b3f71?rik=69LMjaxwb9Q32w&pid=ImgRaw&r=0" alt="Khalti"> 
+            <div>
+                <strong>Khalti ID:</strong> <span style="color: purple; font-weight: bold;">9768300612</span><br/>
+                <small>Name: Prabin Hamal</small>
+            </div>
+        </div>
+
+        <div class="payment-method">
+            <!-- <i class="fas fa-university" style="font-size: 30px; color: #555;"></i> -->
+             <img src="https://images.seeklogo.com/logo-png/61/1/nabil-bank-logo-png_seeklogo-613796.png" alt="Nabll Bank logo">
+            <div>
+                <strong>Bank Transfer:</strong><br/>
+                Nabil Bank Limited<br/>
+                Acc: **************<br/>
+                Account Holder Name: Prabin Hamal
+            </div>
+        </div>
+
+        <hr style="margin: 20px 0;"/>
+
+        <h4>2. Fill this Form:</h4>
+        <p style="font-size: 13px; color: #666; margin-bottom: 10px;">After payment, send the screenshot and your email here to get download access.</p>
+        
+        <!-- Replace the action with your Google Form URL or Contact Form script -->
+        <form name="payment-confirm" style="display: flex; flex-direction: column; gap: 10px;">
+            <input type="text" placeholder="Your Name" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="email" placeholder="Your Email (for access)" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <input type="text" placeholder="Transaction ID / Remarks" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <button type="button" class="sub-btn" onclick="alert('Thank you! We will verify your payment and send the access link to your email within 1 hour.')">Confirm Payment</button>
+        </form>
+        
+        <p style="text-align: center; font-size: 12px; margin-top: 10px; color: #888;">
+            Access is granted manually after verification. <br/> Need help? <a href="mailto:info@arjun00.com.np" style="color: var(--primary);">Contact Support</a>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
